@@ -5,6 +5,9 @@ on:
     - cron: '0 0 * * *' # 每天凌晨 00:00 UTC 时间同步一次，可以自行调整
   workflow_dispatch: # 允许手动触发
 
+permissions:
+  contents: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
